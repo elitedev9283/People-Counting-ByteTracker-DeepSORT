@@ -1,20 +1,26 @@
-# object-tracking-yolov8-deep-sort
+# Tracking People Counting with YoloV8 + Both ByteTrack and DeepSORT
 
-Yolov8 object detection + deep sort object tracking !
+Yolov8 object detection + deep sort | byte tracking
 
-[![Watch the video](https://img.youtube.com/vi/jIRRuGN0j5E/0.jpg)](https://www.youtube.com/watch?v=jIRRuGN0j5E)
+- Use DeepSORT 💚 when you need robust tracking in crowded environments and occlusions (e.g., pedestrian tracking in surveillance).
 
-## requirements
+- Use ByteTrack 💙 when you need real-time tracking and fast performance (e.g., autonomous vehicles, sports analytics, drone tracking).
 
-- Python 3.7
-- requirements.txt
+Table added 2025/03/29
 
-## Deep Sort
+| Feature               | DeepSORT        | ByteTrack      |
+|----------------------|----------------|---------------|
+| **Uses Deep Learning (ReID)** | ✅ Yes | ❌ No |
+| **Tracking Approach** | Appearance + Motion | Motion Only |
+| **Works Well in Crowded Scenes** | ✅ Yes | ❌ No |
+| **Speed** | 🐢 Slower (due to ReID) | ⚡ Faster (lightweight) |
+| **Handles Occlusion** | ✅ Better | ❌ Weaker |
+| **Computation Cost** | High (requires feature extraction) | Low (IoU-based) |
+| **Best Use Case** | Crowded scenes, re-identification | Real-time applications |
 
-We are working on [this fork](https://github.com/computervisiondeveloper/deep_sort) from deep sort official implementation.
 
-You can download deep sort feature extraction model [here](https://drive.google.com/open?id=18fKzfqnqhqW3s9zwsCbnVJ5XF2JFeqMp).
+## Download Deep SORT Model
 
-## data
+We are working from [here](https://github.com/computervisiondeveloper/deep_sort) from deep sort official implementation.
 
-You can download the same data I use in the video [here](https://drive.google.com/drive/folders/18srgGIoavKutQ2MDu_d8flAlOW-aDsAG?usp=share_link).
+You can download deep SORT model [here](https://drive.google.com/open?id=18fKzfqnqhqW3s9zwsCbnVJ5XF2JFeqMp).
